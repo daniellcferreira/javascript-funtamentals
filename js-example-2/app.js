@@ -1,9 +1,3 @@
-// let titulo = document.querySelector('h1');
-// titulo.innerHTML = 'Jogo do número secreto';
-
-// let paragrafo = document.querySelector('p');
-// paragrafo.innerHTML = 'Digite um número entre 1 e 10';
-
 let listaNumerosSorteados = [];
 let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
@@ -12,6 +6,7 @@ let tantativas = 1;
 function exibirTexto(tag, texto) {
   let campo = document.querySelector(tag);
   campo.innerHTML = texto;
+  responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate: 1.2});
 }
 
 function exibirMensagemInicial() {
